@@ -1,16 +1,16 @@
 import { useRouter } from 'next/router';
 
-const PortfolioPageWith = () => {
+const ProjectPage = () => {
   const router = useRouter();
 
+  const projectid = router.query.projectid;
   const id = router.query.id;
 
-  debugger;
   return (
     <div>
-      <h1>This is PortfolioPageWith</h1>
+      <h1>This is ClientsProjectPage</h1>
     </div>
   );
 };
 
-export default PortfolioPageWith;
+export default ProjectPage;

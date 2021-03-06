@@ -1,6 +1,8 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const HomePage = () => {
+  const router = useRouter();
   const clients = [
     {
       name: 'Max',
@@ -11,6 +13,12 @@ const HomePage = () => {
       id: 'lol'
     }
   ];
+
+  const navigateToClients = () => {
+    setTimeout(() => {
+      router.push('/clients');
+    }, 1000);
+  };
 
   return (
     <div>
@@ -37,6 +45,8 @@ const HomePage = () => {
           <br />
         </>
       ))}
+
+      <button onClick={navigateToClients}>Go to client in 1 sec</button>
     </div>
   );
 };
